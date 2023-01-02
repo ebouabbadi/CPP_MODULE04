@@ -23,10 +23,9 @@ Cat &Cat::operator=(const Cat &c)
     this->type = c.type;
     return *this;
 }
-void Cat::makeSound()
-{
-    std::cout << "مييو مييو\n";
-}
+void Cat::makeSound()const{
+    std::cout << "miaw miaw\n";
+    }
 
 Cat::~Cat()
 {
