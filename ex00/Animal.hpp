@@ -12,6 +12,10 @@ public:
     Animal(std::string type);
     Animal(const Animal &c);
     Animal &operator=(const Animal &c);
+    std::string getType()const;
+    virtual void    makeSound()const{
+
+    };
     ~Animal();
 };
 
