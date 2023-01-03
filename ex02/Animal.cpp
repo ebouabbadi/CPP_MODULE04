@@ -7,7 +7,7 @@ Animal::Animal()
 
 Animal::Animal(std::string type)
 {
-    std::cout << "Animal Parammetrs Constructor" << std::endl;
+    std::cout << "Animal Parametrized Constructor" << std::endl;
     this->type = type;
 }
 
@@ -21,16 +21,11 @@ Animal &Animal::operator=(const Animal &c)
 {
     std::cout << "Animal Copy assignment operator" << std::endl;
     this->type = c.type;
-    return (*this);
+    return *this;
 }
 std::string Animal::getType() const
 {
     return (this->type);
-}
-
-void Animal::makeSound() const
-{
-    std::cout << "no sound\n";
 }
 
 Animal::~Animal()
