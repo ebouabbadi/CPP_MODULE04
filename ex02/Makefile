@@ -1,6 +1,6 @@
 NAME = Poly
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -15,7 +15,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
-%.o:%.cpp	Animal.hpp Dog.hpp Cat.hpp Brain.hpp
+%.o:%.cpp	Animal.hpp Dog.hpp Cat.hpp Brain.hpp WrongAnimal.hpp WrongCat.hpp
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 clean : 
